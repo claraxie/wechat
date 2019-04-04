@@ -1,0 +1,16 @@
+<!--components/restaurant-item/restaurant-item.wxml-->
+<view class="restaurants-list">
+  <view>
+    <image src="{{restaurant.src}}" class="restaurants-image"/>
+  </view>
+  <view class="restaurants-info">
+    <view class="restaurants-info-name">{{restaurant.name}}</view>
+    <view class="restaurants-info-rating">
+      <view class="restaurants-info-rating-stars">★ ★ ★ ★</view>
+      <view class="restaurants-info-rating-sales"> {{restaurant.sales}} vendus</view>
+    </view>
+    <view>
+      à partir de {{restaurant.initial_price}}€ | livraison {{restaurant.distribution_price}}€
+    </view>
+  </view>
+</view>

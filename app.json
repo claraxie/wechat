@@ -1,13 +1,43 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/home/home",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/logs/logs",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#009999",
+    "navigationBarTitleText": "Command Plat",
+    "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#272636",
+    "selectedColor": "#FFD161",
+    "backgroundColor": "#009999",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "pages/images/home.png",
+        "selectedIconPath": "pages/images/home.png",
+        "color": "white",
+        "text": "home"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "pages/images/order.png",
+        "selectedIconPath": "pages/images/order.png",
+        "text": "order"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "pages/images/my.png",
+        "selectedIconPath": "pages/images/my.png",
+        "text": "my"
+      }
+    ]
+  }
 }

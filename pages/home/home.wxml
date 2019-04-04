@@ -1,0 +1,9 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="table">
+  <block wx:for="{{restaurants}}">
+    <restaurant-item restaurant="{{item}}">
+    </restaurant-item>
+  </block>
+  </view>
+</view>

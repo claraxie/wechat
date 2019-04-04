@@ -1,0 +1,7 @@
+/* pages/home/home.wxss */
+.table {
+  height: 1000rpx;
+  color: black;
+  line-height: 80rpx;
+  text-align: center;
+}
