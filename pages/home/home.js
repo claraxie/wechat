@@ -28,7 +28,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: "https://www.easy-mock.com/mock/596257bc9adc231f357c4664/restaurant/info",//easy-mock生成的虚拟数据接口链接
+      url: "https://easy-mock.com/mock/5ca5fd2c5c2b7f10af50e927/example/restc",//easy-mock生成的虚拟数据接口链接
       method: "GET",
       success: function (res) {//成功得到数据，对数据进行处理
         that.setData({//将数据发送到data中
