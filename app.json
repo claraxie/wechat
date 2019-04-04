@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/my/my",
     "pages/order/order",
+    "pages/location/location",
     "pages/logs/logs",
     "pages/index/index"
   ],
@@ -39,5 +40,10 @@
         "text": "my"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

@@ -1,12 +1,29 @@
-// pages/home/home.js
+// pages/location/location.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    restaurants: [],
-    location: ""
+
+  },
+
+  getLocation: function() {
+    wx.getLocation({
+      type: 'gcj02',
+      success: function(res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.request({
+          url: 'http://api.map.baidu.com/geocoder/v2/?ak=7lBzcxECnMYpQSHTn68uLWG3wDjXmzrX&coordtype=gcj02ll&location=' + latitude + ',' + longitude + '&output=json&pois=0',
+          method: "get",
+          success: function(res){
+            console.log(res.data)
+            wx.setStorageSync('location', res.data.result.formatted_address.substr(res.data.result.formatted_address.indexOf('市') + 1, 10))
+          }
+        })
+      },
+    })
   },
 
   /**
@@ -27,17 +44,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-    var that = this;
-    wx.request({
-      url: "https://easy-mock.com/mock/5ca5fd2c5c2b7f10af50e927/example/restc",//easy-mock生成的虚拟数据接口链接
-      method: "GET",
-      success: function (res) {//成功得到数据，对数据进行处理
-        that.setData({//将数据发送到data中
-          restaurants: res.data.data.restaurant,
-          location: wx.getStorageSync('location')
-        })
-      }
-    });
+
   },
 
   /**

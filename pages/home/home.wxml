@@ -1,9 +1,17 @@
 <!--pages/home/home.wxml-->
 <view class="container">
+  <view class="heard">
+    <navigator url="/pages/location/location">
+      <view class="heard-location">
+        <image class="heard-location-icon" src="../images/location.png"></image>
+        <text class="heard-location-text">{{location}}</text>
+      </view>
+    </navigator>
+  </view>
   <view class="table">
-  <block wx:for="{{restaurants}}">
-    <restaurant-item restaurant="{{item}}">
-    </restaurant-item>
-  </block>
+    <block wx:for="{{restaurants}}">
+      <restaurant-item restaurant="{{item}}">
+      </restaurant-item>
+    </block>
   </view>
 </view>
