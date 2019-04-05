@@ -28,6 +28,20 @@
       </scroll-view>
     </view>
   </view>
+  <view class="filters">
+    <view class="type-resto" bindtap="showTypeResto">
+      <text>{{typeRestaurant}}</text>
+    </view>
+    <view class="type-resto" bindtap="showBestSale">
+      <text>Le meilleure vendu</text>
+    </view>
+     <view class="type-resto" bindtap="showClosest">
+      <text>Le plus proche</text>
+    </view>
+  </view>
+  <view class="select-type-box" wx:if="{{select}}">
+    <view wx:for="{{types}}" class="select-one" bindtap="selectType" data-name="{{item}}">{{item}}</view>
+  </view>
   <view class="table">
     <block wx:for="{{restaurants}}">
       <restaurant-item restaurant="{{item}}">

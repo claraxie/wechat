@@ -83,4 +83,38 @@
 
 .sx_swiper {
   margin-left: 30rpx;
+  height: 40rpx;
+}
+
+.filters {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+.type-resto {
+  width: 34%;
+  height: 40rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border: 1px solid #009999;
+  padding: 10rpx;
+}
+
+
+.select-type-box {
+    background-color: white;
+    padding: 10rpx;
+    width: 93%;
+    position: absolute;
+    top: 150rpx;
+    z-index: 1;
+    overflow: hidden;
+    animation: myfirst 0.5s;
+}
+
+.select-one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
 }

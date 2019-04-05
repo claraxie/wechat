@@ -9,7 +9,10 @@ Page({
     restaurants: [],
     location: "",
     hidden: true,
-    locationList: []
+    locationList: [],
+    select: false,
+    typeRestaurant: "Type de restaurant",
+    types: ["Cuisine(toutes)", "Allemand", "Chinois", "Coréen", "Français", "Japonais","Italien"]
   },
 
   inputAddress: function (event) {
@@ -35,6 +38,15 @@ Page({
   onTapResult: function (event) {
     wx.setStorageSync('location', event.currentTarget.dataset.key)
     this.setData({ location: event.currentTarget.dataset.key, hidden: true, inputValue: ""})
+  },
+
+  showTypeResto: function(event) {
+      this.setData({select: !this.data.select})
+  },
+
+  selectType: function(event) {
+      let name = event.currentTarget.dataset.name
+      this.setData({ typeRestaurant: name, select: false})
   },
 
   /**
