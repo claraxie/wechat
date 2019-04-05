@@ -1,0 +1,15 @@
+<!--pages/location/location.wxml--> 
+<view class="getLocation" bindtap="getLocation"> Ma position actuelle </view> 
+<view> 
+  <view class="addLocation">Ajouter une nouvelle addresse de livraison 
+    <view class="addLocation-icon" bindtap="onTapAddLocation">+</view> 
+  </view> 
+</view> 
+<view class="myLocation">Mon adresse de livraison</view> 
+<view class="locationList"> 
+   <block wx:for="{{myLocations}}" wx:key=""> 
+    <view class="locationInfo">{{item.address}} 
+      <view class="locationInfo-desc">{{item.contact}} | {{item.telephone}}</view> 
+    </view> 
+   </block> 
+</view> 
