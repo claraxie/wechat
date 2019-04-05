@@ -10,6 +10,7 @@
 .comment-item-header {
   height: 50rpx;
   display: flex;
+  margin: 20rpx;
 }
 
 .comment-item-name {
@@ -19,5 +20,12 @@
 
 .comment-item-note {
   width:60%;
+  text-align:center;
+}
+
+.comment-item-comment {
+  font-size:30rpx;
+  margin:8px;
+  width:80%;
   text-align:center;
 }

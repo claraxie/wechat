@@ -3,7 +3,8 @@
   <view class="commentPage-header">
     <view class="commentPage-score">
       <view class="overall">
-      Note : 4.3
+      Note : 
+      <view class="commentPage-note">4.3</view>
       </view>
       <view class="rate">
       <view class="">★ ★ ★ ★ Plat: 4.9 </view>
