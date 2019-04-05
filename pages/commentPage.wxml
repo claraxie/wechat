@@ -1,0 +1,14 @@
+<template name="commentPage">
+<scroll-view class="" scroll-y="true">
+  <view class="commentPage-header">
+    <view class="commentPage-score">
+      <view class="overall">
+      </view>
+      <view class="rate">
+      </view>
+    </view>
+  </view>
+  <view class="commentPage-list">
+  </view>
+</scroll-view>
+</template>

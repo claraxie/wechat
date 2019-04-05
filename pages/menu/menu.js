@@ -1,64 +1,126 @@
-// pages/menu/menu.js
 Page({
-
   /**
-   * Page initial data
+   * 页面的初始数据
    */
   data: {
-
+    swiperTitle: [{
+      text: "Command",
+      id: 1
+    }, {
+      text: "Commentaire",
+      id: 2
+    }, {
+      text: "Restaurant",
+      id: 3
+    }],
+    menu: [],
+    currentPage: 0,
+    selected: 0,
+    howMuch: 12,
+    cost: 0,
+    pullBar: false
   },
-
+  pullBar: function () {
+    this.setData({
+      pullBar: !this.data.pullBar
+    })
+  }
+  ,
+  addToTrolley: function (e) {
+    var info = this.data.menu;
+    info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb++;
+    this.setData({
+      cost: this.data.cost + this.data.menu[this.data.selected].menuContent[e.currentTarget.dataset.index].price,
+      menu: info,
+    })
+  },
+  removeFromTrolley: function (e) {
+    var info = this.data.menu;
+    if (info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb != 0) {
+      info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb--;
+      this.setData({
+        cost: this.data.cost - this.data.menu[this.data.selected].menuContent[e.currentTarget.dataset.index].price,
+        menu: info,
+      })
+    }
+  },
+  turnPage: function (e) {
+    this.setData({
+      currentPage: e.currentTarget.dataset.index
+    })
+  },
+  turnTitle: function (e) {
+    if (e.detail.source == "touch") {
+      this.setData({
+        currentPage: e.detail.current
+      })
+    }
+  },
+  turnMenu: function (e) {
+    this.setData({
+      selected: e.currentTarget.dataset.index
+    })
+  },
   /**
-   * Lifecycle function--Called when page load
+   * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    wx.request({
+      url: "https://easy-mock.com/mock/5ca70f15ef77d72844bfd3f7/menu/menu",
+      method: "GET",
+      success: function (res) {
+        that.setData({
+          menu: res.data,
+        })
+      }
+    });
   },
 
   /**
-   * Lifecycle function--Called when page is initially rendered
+   * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
 
   },
 
   /**
-   * Lifecycle function--Called when page show
+   * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
   },
 
   /**
-   * Lifecycle function--Called when page hide
+   * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
 
   },
 
   /**
-   * Lifecycle function--Called when page unload
+   * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
 
   },
 
   /**
-   * Page event handler function--Called when user drop down
+   * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
 
   },
 
   /**
-   * Called when page reach bottom
+   * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
 
   },
 
   /**
-   * Called when user click on the top right corner to share
+   * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 

@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <view class="container">
   <view class="table">
-  <block wx:for="{{restaurants}}">
+  <block wx:for="{{restaurants}}" wx:key="{{index}}">
     <restaurant-item restaurant="{{item}}">
     </restaurant-item>
   </block>
