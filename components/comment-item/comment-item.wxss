@@ -1,0 +1,23 @@
+.comment-list {
+  height: 100%
+}
+.comment-item {
+  height: 200rpx;
+  padding-bottom:20r;
+  border-bottom:20rpx solid #F4F4F4;
+}
+
+.comment-item-header {
+  height: 50rpx;
+  display: flex;
+}
+
+.comment-item-name {
+  width:40%;
+  text-align:center;
+}
+
+.comment-item-note {
+  width:60%;
+  text-align:center;
+}

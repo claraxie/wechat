@@ -1,0 +1,21 @@
+<template name="commentPage">
+<scroll-view class="commentPage-scroll" scroll-y="true">
+  <view class="commentPage-header">
+    <view class="commentPage-score">
+      <view class="overall">
+      Note : 4.3
+      </view>
+      <view class="rate">
+      <view class="">★ ★ ★ ★ Plat: 4.9 </view>
+      <view class="">★ ★ ★ ★ Emballage: 4.8</view>
+      </view>
+    </view>
+  </view>
+  <view class="commentPage-list">
+    <block wx:for="{{comments}}" wx:key="{{index}}">
+    <comment-item comment="{{item}}">
+    </comment-item>
+  </block>
+  </view>
+</scroll-view>
+</template>
