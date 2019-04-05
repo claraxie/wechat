@@ -7,6 +7,19 @@
         <text class="heard-location-text">{{location}}</text>
       </view>
     </navigator>
+    <view class="search-input">
+      <input placeholder="Saisir votre adresse de livraison" bindinput="inputAddress">
+      </input>
+    </view>
+    <view class="result-container" hidden="{{hidden}}">
+      <scroll-view scroll-y="true" class="search-result-list">
+        <block wx:for="{{locationList}}" wx:key="">
+          <view class="search-result" bindtap="onTapResult" data-key="{{item.address}}">{{item.name}}
+            <view class="search-result-desc">{{item.address}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
   </view>
   <view class="table">
     <block wx:for="{{restaurants}}">

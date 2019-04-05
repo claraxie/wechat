@@ -5,8 +5,6 @@ Page({
    * Page initial data
    */
   data: {
-    hidden: true,
-    locationList: [],
     myLocations: [
       {
         address: "59 Rue de la Sablière, 92400, Courbevoie",
@@ -32,33 +30,6 @@ Page({
           }
         })
       },
-    })
-  },
-
-  inputAddress: function(event){
-    if(event.detail.value){
-      this.setData({hidden: false})
-      this.search(event.detail.value)
-    }else {
-      this.setData({ hidden: true })
-    }
-  },
-
-  search: function(text){
-    var that = this
-    wx.request({
-      url: 'http://api.map.baidu.com/place/v2/search?query=' + text +'&page_size=20&page_num=0&scope=2&region=上海&output=json&ak=7lBzcxECnMYpQSHTn68uLWG3wDjXmzrX',
-      success: function(res) {
-        console.log(res);
-        that.setData({locationList: res.data.results})
-      }
-    })
-  },
-
-  onTapResult: function(event){
-    wx.setStorageSync('location', event.currentTarget.dataset.key)
-    wx.switchTab({
-      url: '/pages/home/home',
     })
   },
 
