@@ -14,8 +14,7 @@ App({
             console.log(res.data.result.formatted_address)
             let address = res.data.result.formatted_address
             let firstIndex = address.indexOf(",")
-            console.log(address.substr(0, address.indexOf(',', firstIndex)))
-            wx.setStorageSync('location', address.substr(0, address.indexOf(',', firstIndex)))
+            wx.setStorageSync('location', address.substr(0, address.indexOf(',', firstIndex + 1)))
           }
         })
       }
