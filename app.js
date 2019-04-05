@@ -2,6 +2,23 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.request({
+          url: 'http://api.map.baidu.com/geocoder/v2/?ak=7lBzcxECnMYpQSHTn68uLWG3wDjXmzrX&coordtype=gcj02ll&location=' + latitude + ',' + longitude + '&output=json&pois=0',
+          method: "get",
+          success: function (res) {
+            console.log(res.data.result.formatted_address)
+            let address = res.data.result.formatted_address
+            let firstIndex = address.indexOf(",")
+            wx.setStorageSync('location', address.substr(0, address.indexOf(',', firstIndex + 1)))
+          }
+        })
+      }
+    })
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
@@ -34,6 +51,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    location: ""
   }
 })
