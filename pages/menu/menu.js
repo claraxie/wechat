@@ -18,7 +18,8 @@ Page({
     selected: 0,
     howMuch: 12,
     cost: 0,
-    pullBar: false
+    pullBar: false,
+    comments:[]
   },
   pullBar: function () {
     this.setData({
@@ -72,6 +73,17 @@ Page({
       success: function (res) {
         that.setData({
           menu: res.data,
+        })
+      }
+    });
+
+    wx.request({
+      url: "https://easy-mock.com/mock/5ca750faf9acc443484e3a79/comments/comments",
+      method: "GET",
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          comments: res.data,
         })
       }
     });
