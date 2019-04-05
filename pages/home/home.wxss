@@ -35,13 +35,11 @@
 
 .heard-location-text{
   position: absolute;
-  left: 47rpx;
   top: 9rpx;
   height: 30rpx;
-  width: 190rpx;
   white-space:nowrap;
-  overflow:hidden; /*超出一行文字自动隐藏*/
-  text-overflow:ellipsis;/*文字隐藏后添加省略号*/
+ /* overflow:hidden; 超出一行文字自动隐藏*/
+  /*text-overflow:ellipsis;文字隐藏后添加省略号*/
 }
 
 .heard .search-input {
@@ -81,4 +79,8 @@
   line-height: 35rpx;
   color: #AAAAAA;
   font-size: 24rpx;
+}
+
+.sx_swiper {
+  margin-left: 30rpx;
 }

@@ -5,6 +5,7 @@ Page({
    * Page initial data
    */
   data: {
+    inputValue : "", 
     restaurants: [],
     location: "",
     hidden: true,
@@ -33,14 +34,13 @@ Page({
 
   onTapResult: function (event) {
     wx.setStorageSync('location', event.currentTarget.dataset.key)
-    this.setData({ location: event.currentTarget.dataset.key, hidden: true})
+    this.setData({ location: event.currentTarget.dataset.key, hidden: true, inputValue: ""})
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -54,6 +54,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
+    console.log("onShow!!!!")
     var that = this;
     wx.request({
       url: "https://easy-mock.com/mock/5ca5fd2c5c2b7f10af50e927/example/restc",//easy-mock生成的虚拟数据接口链接

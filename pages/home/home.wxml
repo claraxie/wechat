@@ -4,11 +4,18 @@
     <navigator url="/pages/location/location">
       <view class="heard-location">
         <image class="heard-location-icon" src="../images/location.png"></image>
-        <text class="heard-location-text">{{location}}</text>
+        <swiper class="sx_swiper" autoplay interval="5000" duration="6000" next-margin="-360rpx" circular> 
+            <swiper-item> 
+              <text class="heard-location-text">{{location}}</text>
+            </swiper-item> 
+            <swiper-item> 
+              <text class="heard-location-text">{{location}}</text>
+            </swiper-item> 
+        </swiper> 
       </view>
     </navigator>
     <view class="search-input">
-      <input placeholder="Saisir votre adresse de livraison" bindinput="inputAddress">
+      <input placeholder="Saisir votre adresse de livraison" bindinput="inputAddress" value="{{inputValue}}">
       </input>
     </view>
     <view class="result-container" hidden="{{hidden}}">
