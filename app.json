@@ -5,7 +5,8 @@
     "pages/order/order",
     "pages/location/location",
     "pages/logs/logs",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/menu/menu"
   ],
   "window": {
     "backgroundTextStyle": "light",

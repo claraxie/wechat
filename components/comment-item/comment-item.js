@@ -1,26 +1,26 @@
-// components/restaurant-item/restaurant-item.js
+// components/comment-item/comment-item.js
 Component({
   /**
    * Component properties
    */
   properties: {
-      restaurant: {
-        type: Object,
-        value: null
-      }
+    comment: {
+      type: Object,
+      value: null
+    }
   },
 
   /**
    * Component initial data
    */
   data: {
-    
+
   },
 
   /**
    * Component methods
    */
   methods: {
-   
+
   }
 })

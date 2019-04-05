@@ -1,0 +1,10 @@
+<!--components/comment-item/comment-item.wxml-->
+<view class="comment-list">
+  <view class="comment-item">
+    <view class="comment-item-header">
+      <view class='comment-item-name'>{{comment.name}}</view>
+      <view class='comment-item-note'>{{comment.note}} / 10</view>
+    </view>
+    <view class='comment-item-comment'>{{comment.comment}}</view>
+  </view>
+</view>

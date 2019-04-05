@@ -1,6 +1,13 @@
 // pages/order/order.js
 Page({
 
+  properties: {
+    restaurant: {
+      type: Object,
+      value: null
+    }
+  },
+
   /**
    * Page initial data
    */
