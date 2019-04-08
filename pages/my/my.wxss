@@ -1,1 +1,45 @@
 /* pages/my/my.wxss */
+.my-header {
+  height:150rpx;
+  width:100%;
+  background-color: #009999;
+  display:flex;
+  border-bottom: 20rpx solid rgb(209, 207, 207);
+}
+
+.my-image {
+  height:90%;
+  width:30%;
+}
+
+.my-pic {
+  height:130rpx;
+  width:130rpx;
+  margin: 10rpx;
+}
+
+.my-name {
+  font-weight: bold;
+}
+
+.my-utils {
+  width:100%;
+  height:200rpx;
+  display:flex;
+}
+
+.my-utils-img {
+  width:25%;
+  height:80%;
+  margin: 20rpx;
+  text-align: center;
+}
+
+.my-utils-pic {
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.my-utils-word {
+  font-size: 30rpx;
+}
