@@ -81,7 +81,6 @@ Page({
       url: "https://easy-mock.com/mock/5ca750faf9acc443484e3a79/comments/comments",
       method: "GET",
       success: function (res) {
-        console.log(res.data)
         that.setData({
           comments: res.data,
         })
