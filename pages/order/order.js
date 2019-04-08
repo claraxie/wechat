@@ -1,18 +1,23 @@
 // pages/order/order.js
 Page({
-
-  properties: {
-    restaurant: {
-      type: Object,
-      value: null
-    }
-  },
-
   /**
    * Page initial data
    */
   data: {
-
+    orderList: [
+      {
+        restaurantName: "BOTH CAFE",
+        statut:"Finish",
+        order: "dirty",
+        price:"24"
+      },
+      {
+        restaurantName: "XIAO YANG",
+        statut: "Finish",
+        order: "sheng jian",
+        price: "43"
+      }
+    ]
   },
 
   /**

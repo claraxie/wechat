@@ -1,0 +1,74 @@
+/* components/order-item/order-item.wxss */
+order-item {
+  width: 100%;
+}
+
+.order-container {
+  height: 270rpx;
+  width: 100%;
+  border-bottom: 20rpx solid #ECECEC
+}
+
+.order-head {
+  width:100%;
+  height:40%;
+  display: flex;
+}
+
+.order-head-right {
+ border-bottom:1rpx solid #ECECEC;
+ display: flex;
+ width: 80%;
+}
+
+.order-img {
+  width:15%;
+  height:80%;
+  margin:10rpx
+}
+
+.order-pic {
+  width:100rpx;
+  height:100rpx;
+}
+
+.order-name {
+  margin:20rpx;
+  font-weight:bold;
+}
+
+.order-statut {
+  position: fixed;
+  right: 0;
+  margin: 30rpx;
+  font-size:45rpx;
+}
+
+.order-contenu {
+  margin-left:20%;
+  display:flex;
+}
+
+.order-price {
+  position: fixed;
+  right: 60rpx;
+  font-size:30rpx;
+  font-weight:bold;
+}
+
+.order-footer {
+  display:flex;
+  position:fixed;
+  right:20rpx;
+}
+.order-button {
+  width:150rpx;
+  height:75
+  rpx;
+  font-size:30rpx;
+  background-color:white;
+  margin:10rpx;
+}
+
+
+
