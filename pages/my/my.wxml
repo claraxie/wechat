@@ -1,2 +1,31 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='container'>
+ <view class='my-header'>
+   <view class='my-image'>
+     <image class='my-pic' src='../images/5.png'></image>
+   </view>
+   <view>
+    <view class='my-name'>clara</view>
+     <navigator url="/pages/myinfos/myinfos">personnaliser</navigator>
+   </view>
+ </view>
+
+ <view class='my-utils'>
+    <view class='my-utils-img'>
+      <image class='my-utils-pic' src='../images/1.png'></image>
+      <view class='my-utils-word'>LIKES</view>
+    </view>
+    <view class='my-utils-img'>
+      <image class='my-utils-pic' src='../images/2.png'></image>
+      <view class='my-utils-word'>ORDERS</view>
+    </view>
+    <view class='my-utils-img'>
+      <image class='my-utils-pic' src='../images/3.png'></image>
+      <view class='my-utils-word'>COMMENTS</view>
+    </view>
+    <view class='my-utils-img'>
+      <image class='my-utils-pic' src='../images/4.png'></image>
+      <view class='my-utils-word'>ADDRESS</view>
+    </view>
+ </view>
+</view>
