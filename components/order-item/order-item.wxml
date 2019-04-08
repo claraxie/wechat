@@ -1,0 +1,22 @@
+<!--components/order-item/order-item.wxml-->
+<view class='order-container'>
+  <view class='order-head'>
+    <view class='order-img'>
+      <image src='/pages/images/1.png' class='order-pic'></image>
+    </view>
+    <view class='order-head-right'>
+      <view class='order-name'>{{order.restaurantName}} </view>
+      <view class='order-statut'>{{order.statut}}</view>
+    </view>   
+  </view>
+  <view class='order-contenu'>
+     <view class='order-order'>{{order.order}}</view>
+     <view class='order-price'>${{order.price}}</view>
+  </view>
+  <view class='order-footer'>
+    <button class="order-button">Same</button>
+    <button class='order-button'>Order</button>
+  </view>
+</view>
+
+
